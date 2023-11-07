@@ -52,11 +52,34 @@
             margin: 0;
             cursor: ew-resize;
         }
+
+        .legend {
+            position: fixed;
+            right: 5px;
+            bottom: 50px;
+            z-index: 1;
+            width: auto;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .legend img {
+            width: 60%;
+            height: auto;
+        }
     </style>
 </head>
 
 <body>
     <div id="map"></div>
+    <div class="legend">
+        <div class="image-container">
+            <img src="Relief_hanrei.png" alt="Legend">
+        </div>
+    </div>
     <script type="module">
 
         // Terrain-RGB形式への変換モジュール
