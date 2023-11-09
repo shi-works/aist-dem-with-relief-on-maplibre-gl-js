@@ -82,7 +82,7 @@
     </div>
     <div class="map-overlay top">
         <div class="map-overlay-inner">
-            <label>標高タイル 高さ倍率: <span id="slider-opacity-value">7倍</span></label>
+            <label>高さを強調する倍率: <span id="slider-opacity-value">7倍</span></label>
             <input id="slider-opacity" type="range" min="0" max="10" step="1" value="7">
         </div>
     </div>
@@ -139,13 +139,15 @@
             customAttribution: '（<a href="https://twitter.com/shi__works" target="_blank">Twitter</a> | <a href="https://github.com/shi-works/aist-dem-with-relief-on-maplibre-gl-js" target="_blank">Github</a>） '
         }));
 
+        /*
         // 3D地形コントロール
         map.addControl(
             new maplibregl.TerrainControl({
                 source: 'aist-dem',
-                exaggeration: 1 // 標高を強調する倍率
+                exaggeration: 7 // 標高を強調する倍率
             })
         );
+        */
 
         map.on('load', () => {
             // 産総研 シームレス標高タイルソース
