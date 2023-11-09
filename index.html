@@ -20,7 +20,7 @@
         .map-overlay {
             font: bold 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
             position: absolute;
-            width: 180px;
+            width: 200px;
             bottom: 20px;
             left: 0;
             padding: 10px;
@@ -82,7 +82,7 @@
     </div>
     <div class="map-overlay top">
         <div class="map-overlay-inner">
-            <label>高さを強調する倍率: <span id="slider-opacity-value">7倍</span></label>
+            <label>地形の高さを強調する倍率: <span id="slider-opacity-value">7倍</span></label>
             <input id="slider-opacity" type="range" min="0" max="10" step="1" value="7">
         </div>
     </div>
@@ -164,13 +164,13 @@
             map.setTerrain({ 'source': 'aist-dem', 'exaggeration': 7 });
 
             // スライダーでシームレス標高タイルの高さの倍率を制御
-            const sliderOpactiy = document.getElementById('slider-opacity');
-            const sliderOpactiyValue = document.getElementById('slider-opacity-value');
+            const sliderOpacity = document.getElementById('slider-opacity');
+            const sliderOpacityValue = document.getElementById('slider-opacity-value');
 
-            sliderOpactiy.addEventListener('input', (e) => {
+            sliderOpacity.addEventListener('input', (e) => {
                 const exaggerationValue = parseFloat(e.target.value);
                 map.setTerrain({ 'source': 'aist-dem', 'exaggeration': exaggerationValue });
-                sliderOpactiyValue.textContent = e.target.value + '倍';
+                sliderOpacityValue.textContent = e.target.value + '倍';
             });
 
             map.showTileBoundaries = false;
