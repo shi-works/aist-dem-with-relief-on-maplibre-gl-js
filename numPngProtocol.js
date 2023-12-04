@@ -1,3 +1,4 @@
+// numPngProtocol.js, 2023-11-27　西岡 芳晴 ( NISHIOKA Yoshiharu )
 function makeNumPngProtocol( protocol = 'numpng', 
 		factor = 0.01, invalidValue = -( 2 ** 23 ) ){
 	return ( params, callback ) => {
