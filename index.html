@@ -88,6 +88,8 @@
     </div>
 
     <script type="module">
+        // addProtocolを設定
+        maplibregl.addProtocol('numpng', makeNumPngProtocol());
 
         // Terrain-RGB形式への変換モジュール
         import { makeNumPngProtocol } from './numPngProtocol.js'
@@ -176,9 +178,6 @@
             map.showTileBoundaries = false;
 
         })
-
-        // addProtocolを設定
-        maplibregl.addProtocol('numpng', makeNumPngProtocol());
 
     </script>
 </body>
